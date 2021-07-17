@@ -1,5 +1,5 @@
 object AppConfig {
-    const val applicationId = "com.kobeissidev.jetpackcomposedemo"
+    const val applicationId = "com.kobeissidev.jetpackcomposespotifyui"
 
     const val compileSDK = 30
     const val buildTools = "30.0.3"

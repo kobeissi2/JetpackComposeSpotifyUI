@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposedemo.home
+package com.kobeissidev.jetpackcomposespotifyui.home
 
 import android.content.Context
 import android.widget.Toast
@@ -13,7 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import com.kobeissidev.jetpackcomposedemo.R
+import com.kobeissidev.jetpackcomposespotifyui.R
 
 @Composable
 fun TopRow(context: Context = LocalContext.current) {

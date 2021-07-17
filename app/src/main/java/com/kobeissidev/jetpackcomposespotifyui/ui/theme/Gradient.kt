@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposedemo.ui.theme
+package com.kobeissidev.jetpackcomposespotifyui.ui.theme
 
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind

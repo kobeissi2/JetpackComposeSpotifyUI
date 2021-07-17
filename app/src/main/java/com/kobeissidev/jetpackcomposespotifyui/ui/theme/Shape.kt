@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposedemo.ui.theme
+package com.kobeissidev.jetpackcomposespotifyui.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

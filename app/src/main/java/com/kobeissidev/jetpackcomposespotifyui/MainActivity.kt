@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposedemo
+package com.kobeissidev.jetpackcomposespotifyui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -13,10 +13,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import com.kobeissidev.jetpackcomposedemo.home.ChooseMusic
-import com.kobeissidev.jetpackcomposedemo.home.TopRow
-import com.kobeissidev.jetpackcomposedemo.ui.theme.*
-import com.kobeissidev.jetpackcomposedemo.ui.theme.SpotifyDarkPurple
+import com.kobeissidev.jetpackcomposespotifyui.home.ChooseMusic
+import com.kobeissidev.jetpackcomposespotifyui.home.TopRow
+import com.kobeissidev.jetpackcomposespotifyui.ui.theme.*
+import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyDarkPurple
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

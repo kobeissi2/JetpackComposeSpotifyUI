@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposedemo
+package com.kobeissidev.jetpackcomposespotifyui
 
 import org.junit.Test
 
