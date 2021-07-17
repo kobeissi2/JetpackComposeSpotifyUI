@@ -19,6 +19,8 @@ object Dependencies {
             // Material design icons
             add("androidx.compose.material:material-icons-core:$compose")
             add("androidx.compose.material:material-icons-extended:$compose")
+            // Accompanist to supplement Jetpack Compose
+            add("com.google.accompanist:accompanist-systemuicontroller:$accompanist")
             // Navigation Architecture
             add("androidx.navigation:navigation-compose:$navigation")
         }
