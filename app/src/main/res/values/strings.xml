@@ -13,4 +13,6 @@
     <string name="playlist">Your Playlists</string>
     <string name="premium">Premium</string>
     <string name="album">album</string>
+    <string name="get_premium">Get Premium</string>
+    <string name="take_control">Take control of your music with Premium.</string>
 </resources>

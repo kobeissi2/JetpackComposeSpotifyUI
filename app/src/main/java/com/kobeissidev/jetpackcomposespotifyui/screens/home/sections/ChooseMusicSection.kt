@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kobeissidev.jetpackcomposespotifyui.R
 import com.kobeissidev.jetpackcomposespotifyui.composable.RippleButton
+import com.kobeissidev.jetpackcomposespotifyui.composable.RoundedRippleButton
 
 @Composable
 fun ChooseMusicSection() {
@@ -44,34 +45,12 @@ fun ChooseMusicSection() {
                 modifier = Modifier.padding(start = 64.dp, end = 64.dp)
             )
             Spacer(modifier = Modifier.padding(top = 24.dp))
-            ChooseMusicButton()
+            RoundedRippleButton(textId = R.string.choose_music)
             Spacer(modifier = Modifier.padding(top = 16.dp))
             NotNowButton()
         }
     }
 
-}
-
-@Composable
-private fun ChooseMusicButton(context: Context = LocalContext.current) {
-    RippleButton(
-        onClick = { Toast.makeText(context, R.string.choose_music, Toast.LENGTH_SHORT).show() },
-        shape = RoundedCornerShape(50),
-        ripple = rememberRipple(color = Color.Black)
-    ) {
-        Text(
-            text = stringResource(id = R.string.choose_music).uppercase(),
-            style = MaterialTheme.typography.button.copy(
-                textAlign = TextAlign.Center,
-                fontWeight = FontWeight.ExtraBold,
-                letterSpacing = 0.sp
-            ),
-            modifier = Modifier.padding(
-                vertical = 4.dp,
-                horizontal = 48.dp
-            )
-        )
-    }
 }
 
 @Composable
