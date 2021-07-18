@@ -1,24 +1,19 @@
 package com.kobeissidev.jetpackcomposespotifyui.composable
 
-import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyDarkPurple
 
 @Composable
 fun SystemBar() {
     val systemUiController = rememberSystemUiController()
-    val useDarkIcons = MaterialTheme.colors.isLight
 
     SideEffect {
-        // Update all of the system bar colors to be transparent, and use
-        // dark icons if we're in light theme
-        systemUiController.setSystemBarsColor(
-            color = Color.Transparent,
-            darkIcons = useDarkIcons
-        )
-
-        // setStatusBarsColor() and setNavigationBarsColor() also exist
+        systemUiController.run {
+            setSystemBarsColor(color = SpotifyDarkPurple)
+            setStatusBarColor(color = Color.Black)
+        }
     }
 }

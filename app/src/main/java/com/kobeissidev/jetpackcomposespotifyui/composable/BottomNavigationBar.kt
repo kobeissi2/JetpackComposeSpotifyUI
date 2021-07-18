@@ -19,7 +19,9 @@ fun BottomNavigationBar(
     items: List<BottomNavigationScreens>
 ) {
     BottomNavigation {
-        val currentRoute = currentRoute(navController)
+        val navBackStackEntry by navController.currentBackStackEntryAsState()
+        val currentRoute =  navBackStackEntry?.destination?.route
+
         items.forEach { screen ->
             BottomNavigationItem(
                 icon = {
@@ -27,13 +29,13 @@ fun BottomNavigationBar(
                     screen.icon?.let {
                         Icon(
                             imageVector = it,
-                            contentDescription = ""
+                            contentDescription = null
                         )
                     }
                     //Otherwise use the drawableId
                         ?: Icon(
                             painter = rememberImagePainter(data = screen.drawableId),
-                            contentDescription = ""
+                            contentDescription = null
                         )
                 },
                 label = {
@@ -54,11 +56,4 @@ fun BottomNavigationBar(
             )
         }
     }
-}
-
-
-@Composable
-private fun currentRoute(navController: NavHostController): String? {
-    val navBackStackEntry by navController.currentBackStackEntryAsState()
-    return navBackStackEntry?.destination?.route
 }

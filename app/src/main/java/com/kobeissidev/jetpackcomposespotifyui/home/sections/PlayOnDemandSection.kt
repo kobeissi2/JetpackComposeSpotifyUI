@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.home
+package com.kobeissidev.jetpackcomposespotifyui.home.sections
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -15,7 +15,7 @@ fun PlayOnDemandSection() {
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(all = 16.dp)
+            .padding(all = 36.dp)
     ) {
         Header(
             id = R.string.play_on_demand,

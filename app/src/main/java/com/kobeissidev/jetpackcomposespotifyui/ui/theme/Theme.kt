@@ -1,16 +1,14 @@
 package com.kobeissidev.jetpackcomposespotifyui.ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
-import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
-private val DarkColorPalette = darkColors(
+private val ColorPalette = lightColors(
     primary = Color.White,
-    primaryVariant = Purple700,
-    secondary = Teal200,
+    primaryVariant = Color.White,
+    secondary = Color.Black,
     background = Color.Black,
     surface = Color.Black,
     onPrimary = Color.Black,
@@ -19,31 +17,10 @@ private val DarkColorPalette = darkColors(
     onSurface = Color.White
 )
 
-private val LightColorPalette = lightColors(
-    primary = Purple500,
-    primaryVariant = Purple700,
-    secondary = Teal200,
-    background = Color.White,
-    surface = Color.White,
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black
-)
-
 @Composable
-fun JetpackComposeDemoTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable () -> Unit
-) {
-    val colors = if (darkTheme) {
-        DarkColorPalette
-    } else {
-        LightColorPalette
-    }
-
+fun JetpackComposeDemoTheme(content: @Composable () -> Unit) {
     MaterialTheme(
-        colors = colors,
+        colors = ColorPalette,
         typography = Typography,
         shapes = Shapes,
         content = content

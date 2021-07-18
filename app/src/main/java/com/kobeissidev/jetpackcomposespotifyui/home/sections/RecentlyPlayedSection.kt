@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.home
+package com.kobeissidev.jetpackcomposespotifyui.home.sections
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -39,7 +39,10 @@ fun RecentlyPlayedSection() {
     ) {
         Header(
             id = R.string.recently_played,
-            modifier = Modifier.padding(8.dp)
+            modifier = Modifier.padding(
+                top = 16.dp,
+                bottom = 8.dp
+            )
         )
         RecentlyPlayedAlbums()
     }
@@ -112,6 +115,7 @@ private fun AlbumTitle(albumName: String) {
         text = text,
         modifier = Modifier
             .width(150.dp)
+            .height(24.dp)
             .padding(horizontal = 12.dp),
         maxLines = 2,
         overflow = TextOverflow.Ellipsis,

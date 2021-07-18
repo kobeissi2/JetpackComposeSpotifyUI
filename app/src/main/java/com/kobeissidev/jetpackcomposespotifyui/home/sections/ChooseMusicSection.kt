@@ -1,5 +1,7 @@
-package com.kobeissidev.jetpackcomposespotifyui.home
+package com.kobeissidev.jetpackcomposespotifyui.home.sections
 
+import android.content.Context
+import android.widget.Toast
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
@@ -12,6 +14,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -29,7 +32,7 @@ fun ChooseMusicSection() {
                 .fillMaxWidth()
                 .padding(
                     horizontal = 8.dp,
-                    vertical = 2.dp
+                    vertical = 12.dp
                 )
         ) {
             Text(
@@ -42,7 +45,7 @@ fun ChooseMusicSection() {
                 style = MaterialTheme.typography.body2.copy(textAlign = TextAlign.Center),
                 modifier = Modifier.padding(start = 64.dp, end = 64.dp)
             )
-            Spacer(modifier = Modifier.padding(top = 16.dp))
+            Spacer(modifier = Modifier.padding(top = 24.dp))
             ChooseMusicButton()
             Spacer(modifier = Modifier.padding(top = 16.dp))
             NotNowButton()
@@ -52,13 +55,9 @@ fun ChooseMusicSection() {
 }
 
 @Composable
-private fun ChooseMusicButton() {
+private fun ChooseMusicButton(context: Context = LocalContext.current) {
     RippleButton(
-        onClick = {
-            /**
-             * TODO
-             */
-        },
+        onClick = { Toast.makeText(context, R.string.choose_music, Toast.LENGTH_SHORT).show() },
         shape = RoundedCornerShape(50),
         ripple = rememberRipple(color = Color.Black)
     ) {
@@ -69,13 +68,16 @@ private fun ChooseMusicButton() {
                 fontWeight = FontWeight.ExtraBold,
                 letterSpacing = 0.sp
             ),
-            modifier = Modifier.padding(vertical = 4.dp, horizontal = 48.dp)
+            modifier = Modifier.padding(
+                vertical = 4.dp,
+                horizontal = 48.dp
+            )
         )
     }
 }
 
 @Composable
-private fun NotNowButton() {
+private fun NotNowButton(context: Context = LocalContext.current) {
     Text(
         text = stringResource(id = R.string.not_now).uppercase(),
         style = MaterialTheme.typography.button.copy(
@@ -84,14 +86,15 @@ private fun NotNowButton() {
             letterSpacing = 0.sp
         ),
         modifier = Modifier
-            .padding(vertical = 1.dp, horizontal = 48.dp)
+            .padding(
+                vertical = 1.dp,
+                horizontal = 48.dp
+            )
             .clickable(
                 indication = null,
                 interactionSource = remember { MutableInteractionSource() }
             ) {
-                /**
-                 * TODO
-                 */
+                Toast.makeText(context, R.string.not_now, Toast.LENGTH_SHORT).show()
             }
     )
 }

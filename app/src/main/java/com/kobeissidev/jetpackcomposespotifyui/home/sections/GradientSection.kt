@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.home
+package com.kobeissidev.jetpackcomposespotifyui.home.sections
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -17,7 +17,7 @@ fun GradientSection() {
                 listOf(SpotifyPurple, SpotifyDarkPurple),
                 angle = -45f
             )
-            .padding(bottom = 12.dp)
+            .padding(bottom = 16.dp)
     ) {
         TopRowSection()
         ChooseMusicSection()

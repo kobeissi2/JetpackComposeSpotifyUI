@@ -8,6 +8,9 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.kobeissidev.jetpackcomposespotifyui.home.sections.GradientSection
+import com.kobeissidev.jetpackcomposespotifyui.home.sections.PlayOnDemandSection
+import com.kobeissidev.jetpackcomposespotifyui.home.sections.RecentlyPlayedSection
 
 @Composable
 fun HomeScreen() {
