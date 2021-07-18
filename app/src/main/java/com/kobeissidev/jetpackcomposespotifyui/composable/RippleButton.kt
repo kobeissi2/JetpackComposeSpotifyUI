@@ -46,9 +46,7 @@ fun RippleButton(
         indication = ripple
     ) {
         CompositionLocalProvider(LocalContentAlpha provides contentColor.alpha) {
-            ProvideTextStyle(
-                value = MaterialTheme.typography.button
-            ) {
+            ProvideTextStyle(value = MaterialTheme.typography.button) {
                 Row(
                     Modifier
                         .defaultMinSize(

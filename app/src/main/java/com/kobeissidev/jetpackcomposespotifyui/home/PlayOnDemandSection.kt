@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
 import com.kobeissidev.jetpackcomposespotifyui.R
-import com.kobeissidev.jetpackcomposespotifyui.home.recentlyplayed.Header
+import com.kobeissidev.jetpackcomposespotifyui.composable.Header
 
 @Composable
 fun PlayOnDemandSection() {

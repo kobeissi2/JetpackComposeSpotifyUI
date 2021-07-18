@@ -1,6 +1,6 @@
-package com.kobeissidev.jetpackcomposespotifyui.home.recentlyplayed
+package com.kobeissidev.jetpackcomposespotifyui.model
 
-import java.util.*
+import com.kobeissidev.jetpackcomposespotifyui.util.capitalizeWords
 
 /**
  * Using online links to speed things up.
@@ -12,13 +12,26 @@ data class Album(
     val artist: String,
     val name: String
 ) {
+
+    /**
+     * Make the string more human readable.
+     */
+    private val String.spaceReplaced get() = replace(' ', '-')
+
+    /**
+     * Build the url as it follows the same pattern.
+     */
     val imageUrl get() = "${baseUrl}${artist.spaceReplaced}-${name.spaceReplaced}${suffixUrl}"
 
+    /**
+     * Capitalize the album name.
+     */
     val albumName get() = name.capitalizeWords()
-
-    private val String.spaceReplaced get() = replace(' ', '-')
 }
 
+/**
+ * Grab 10 albums that are shuffled every time it is called.
+ */
 val albums = listOf(
     Album(artist = "Taylor Swift", name = "1989"),
     Album(artist = "Lady Gaga", name = "Fame Monster"),
@@ -33,16 +46,3 @@ val albums = listOf(
     Album(artist = "Bruce Springsteen", name = "Born in the USA"),
     Album(artist = "Fleetwood Mac", name = "Rumours"),
 ).shuffled().take(10)
-
-fun String.capitalizeWords(): String = split(" ").map { it.capitalized() }.joinToString(" ")
-
-/**
- * Replacement for Kotlin's deprecated `capitalize()` function.
- */
-fun String.capitalized(): String {
-    return this.replaceFirstChar {
-        if (it.isLowerCase())
-            it.titlecase(Locale.getDefault())
-        else it.toString()
-    }
-}

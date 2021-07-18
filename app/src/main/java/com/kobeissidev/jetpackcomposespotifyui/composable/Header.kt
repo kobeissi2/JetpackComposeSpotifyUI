@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.home.recentlyplayed
+package com.kobeissidev.jetpackcomposespotifyui.composable
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxWidth

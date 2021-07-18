@@ -28,8 +28,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
 import com.kobeissidev.jetpackcomposespotifyui.R
-import com.kobeissidev.jetpackcomposespotifyui.home.recentlyplayed.Header
-import com.kobeissidev.jetpackcomposespotifyui.home.recentlyplayed.albums
+import com.kobeissidev.jetpackcomposespotifyui.composable.Header
+import com.kobeissidev.jetpackcomposespotifyui.model.albums
 import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyShuffleBlue
 
 @Composable
@@ -46,18 +46,16 @@ fun RecentlyPlayedSection() {
 }
 
 @Composable
-fun RecentlyPlayedAlbums() {
+private fun RecentlyPlayedAlbums() {
     LazyRow {
         items(items = albums, itemContent = {
             Column {
                 Image(
                     painter = rememberImagePainter(it.imageUrl),
-                    contentDescription = null,
+                    contentDescription = stringResource(id = R.string.album),
                     modifier = Modifier
                         .size(150.dp)
-                        .padding(
-                            vertical = 8.dp
-                        )
+                        .padding(vertical = 8.dp)
                 )
                 AlbumTitle(it.albumName)
             }
@@ -66,7 +64,7 @@ fun RecentlyPlayedAlbums() {
 }
 
 @Composable
-fun AlbumTitle(albumName: String) {
+private fun AlbumTitle(albumName: String) {
     val myId = "inlineContent"
     val text = buildAnnotatedString {
         // Append a placeholder string "[icon]" and attach an annotation "inlineContent" on it.

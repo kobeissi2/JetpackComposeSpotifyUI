@@ -6,10 +6,6 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
-/**
- * Update the system bar's color.
- * I don't plan on reusing this so I'm just going to make it private.
- */
 @Composable
 fun SystemBar() {
     val systemUiController = rememberSystemUiController()

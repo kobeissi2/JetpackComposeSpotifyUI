@@ -8,4 +8,9 @@
     <string name="choose_music">Choose Music</string>
     <string name="recently_played">Recently played</string>
     <string name="play_on_demand">Play on demand</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="playlist">Your Playlists</string>
+    <string name="premium">Premium</string>
+    <string name="album">album</string>
 </resources>
