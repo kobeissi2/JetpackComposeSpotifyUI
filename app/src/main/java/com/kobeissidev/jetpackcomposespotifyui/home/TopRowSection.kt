@@ -14,25 +14,28 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import com.kobeissidev.jetpackcomposespotifyui.R
+import com.kobeissidev.jetpackcomposespotifyui.composable.IconButton
 
 @Composable
-fun TopRow(context: Context = LocalContext.current) {
+fun TopRowSection(context: Context = LocalContext.current) {
     Row(
         horizontalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier.fillMaxWidth()
     ) {
-
         IconButton(
             imageVector = Icons.Outlined.PersonOutline,
             contentDescription = stringResource(id = R.string.user_icon_content_description)
-        ) { buildToast(context, R.string.user_icon_content_description) }
-
+        ) {
+            buildToast(context, R.string.user_icon_content_description)
+        }
         IconButton(
             imageVector = Icons.Outlined.Settings,
             contentDescription = stringResource(id = R.string.settings_icon_content_description)
-        ) { buildToast(context, R.string.settings_icon_content_description) }
+        ) {
+            buildToast(context, R.string.settings_icon_content_description)
+        }
     }
 }
 
 private fun buildToast(context: Context, @StringRes textRes: Int) =
-    Toast.makeText(context, context.getString(textRes), Toast.LENGTH_SHORT).show()
+    Toast.makeText(context, textRes, Toast.LENGTH_SHORT).show()

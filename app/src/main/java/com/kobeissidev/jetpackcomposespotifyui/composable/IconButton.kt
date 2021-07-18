@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.home
+package com.kobeissidev.jetpackcomposespotifyui.composable
 
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton

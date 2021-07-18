@@ -23,6 +23,8 @@ object Dependencies {
             add("com.google.accompanist:accompanist-systemuicontroller:$accompanist")
             // Navigation Architecture
             add("androidx.navigation:navigation-compose:$navigation")
+            // Used for image loading
+            add("io.coil-kt:coil-compose:$coil")
         }
     }
 

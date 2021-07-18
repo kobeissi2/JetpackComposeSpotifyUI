@@ -3,20 +3,18 @@ package com.kobeissidev.jetpackcomposespotifyui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.MaterialTheme
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.google.accompanist.systemuicontroller.rememberSystemUiController
-import com.kobeissidev.jetpackcomposespotifyui.home.ChooseMusic
-import com.kobeissidev.jetpackcomposespotifyui.home.TopRow
-import com.kobeissidev.jetpackcomposespotifyui.ui.theme.*
-import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyDarkPurple
+import com.kobeissidev.jetpackcomposespotifyui.home.GradientSection
+import com.kobeissidev.jetpackcomposespotifyui.home.RecentlyPlayedSection
+import com.kobeissidev.jetpackcomposespotifyui.composable.SystemBar
+import com.kobeissidev.jetpackcomposespotifyui.home.PlayOnDemandSection
+import com.kobeissidev.jetpackcomposespotifyui.ui.theme.JetpackComposeDemoTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,47 +25,15 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.padding(horizontal = 2.dp)
                 ) {
-                    Column {
-                        Column(
-                            modifier = Modifier
-                                .gradientBackground(
-                                    listOf(SpotifyPurple, SpotifyMidPurple, SpotifyDarkPurple),
-                                    angle = -45f
-                                )
-                                .padding(bottom = 8.dp)
-                        ) {
-                            TopRow()
-                            Spacer(modifier = Modifier.padding(top = 8.dp))
-                            ChooseMusic()
-                        }
-
-                        Column {
-                            Text(text = "Recently played")
-                        }
+                    Column(
+                        modifier = Modifier.verticalScroll(rememberScrollState())
+                    ) {
+                        GradientSection()
+                        RecentlyPlayedSection()
+                        PlayOnDemandSection()
                     }
                 }
             }
-        }
-    }
-
-    /**
-     * Update the system bar's color.
-     * I don't plan on reusing this so I'm just going to make it private.
-     */
-    @Composable
-    private fun SystemBar() {
-        val systemUiController = rememberSystemUiController()
-        val useDarkIcons = MaterialTheme.colors.isLight
-
-        SideEffect {
-            // Update all of the system bar colors to be transparent, and use
-            // dark icons if we're in light theme
-            systemUiController.setSystemBarsColor(
-                color = Color.Transparent,
-                darkIcons = useDarkIcons
-            )
-
-            // setStatusBarsColor() and setNavigationBarsColor() also exist
         }
     }
 }

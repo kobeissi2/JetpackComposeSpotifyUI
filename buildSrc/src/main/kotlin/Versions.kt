@@ -12,6 +12,7 @@ object Versions {
         const val activityCompose = "1.3.0-rc01"
         const val kotlin = Plugins.kotlin
         const val accompanist = "0.14.0"
+        const val coil = "1.3.0"
     }
 
     object TestImplementations {

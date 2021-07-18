@@ -2,4 +2,10 @@
     <string name="app_name">JetpackComposeSpotifyUI</string>
     <string name="user_icon_content_description">User</string>
     <string name="settings_icon_content_description">Settings</string>
+    <string name="hey">Hey</string>
+    <string name="want_new_playlists">Want new playlists? Pick some music you like.</string>
+    <string name="not_now">Not Now</string>
+    <string name="choose_music">Choose Music</string>
+    <string name="recently_played">Recently played</string>
+    <string name="play_on_demand">Play on demand</string>
 </resources>
