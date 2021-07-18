@@ -1,7 +1,10 @@
 package com.kobeissidev.jetpackcomposespotifyui.home.sections
 
+import android.content.Context
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
@@ -18,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.Placeholder
 import androidx.compose.ui.text.PlaceholderVerticalAlign
@@ -29,7 +33,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
 import com.kobeissidev.jetpackcomposespotifyui.R
 import com.kobeissidev.jetpackcomposespotifyui.composable.Header
-import com.kobeissidev.jetpackcomposespotifyui.model.albums
+import com.kobeissidev.jetpackcomposespotifyui.home.model.albums
 import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyShuffleBlue
 
 @Composable
@@ -49,7 +53,7 @@ fun RecentlyPlayedSection() {
 }
 
 @Composable
-private fun RecentlyPlayedAlbums() {
+private fun RecentlyPlayedAlbums(context: Context = LocalContext.current) {
     LazyRow {
         items(items = albums, itemContent = {
             Column {
@@ -59,6 +63,7 @@ private fun RecentlyPlayedAlbums() {
                     modifier = Modifier
                         .size(150.dp)
                         .padding(vertical = 8.dp)
+                        .clickable { Toast.makeText(context, it.albumName, Toast.LENGTH_SHORT).show() }
                 )
                 AlbumTitle(it.albumName)
             }

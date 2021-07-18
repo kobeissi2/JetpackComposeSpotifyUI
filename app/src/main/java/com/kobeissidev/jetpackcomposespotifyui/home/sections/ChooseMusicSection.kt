@@ -3,14 +3,13 @@ package com.kobeissidev.jetpackcomposespotifyui.home.sections
 import android.content.Context
 import android.widget.Toast
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material.TextButton
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -78,23 +77,20 @@ private fun ChooseMusicButton(context: Context = LocalContext.current) {
 
 @Composable
 private fun NotNowButton(context: Context = LocalContext.current) {
-    Text(
-        text = stringResource(id = R.string.not_now).uppercase(),
-        style = MaterialTheme.typography.button.copy(
-            textAlign = TextAlign.Center,
-            fontWeight = FontWeight.Bold,
-            letterSpacing = 0.sp
-        ),
-        modifier = Modifier
-            .padding(
+    TextButton(
+        onClick = { Toast.makeText(context, R.string.not_now, Toast.LENGTH_SHORT).show() }
+    ) {
+        Text(
+            text = stringResource(id = R.string.not_now).uppercase(),
+            style = MaterialTheme.typography.button.copy(
+                textAlign = TextAlign.Center,
+                fontWeight = FontWeight.Bold,
+                letterSpacing = 0.sp
+            ),
+            modifier = Modifier.padding(
                 vertical = 1.dp,
                 horizontal = 48.dp
             )
-            .clickable(
-                indication = null,
-                interactionSource = remember { MutableInteractionSource() }
-            ) {
-                Toast.makeText(context, R.string.not_now, Toast.LENGTH_SHORT).show()
-            }
-    )
+        )
+    }
 }

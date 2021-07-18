@@ -5,7 +5,7 @@ import java.util.Locale
 /**
  * Capitalize every letter of every word
  */
-fun String.capitalizeWords(): String = split(" ").map { it.capitalized() }.joinToString(" ")
+fun String.capitalizeWords() = split(" ").joinToString(" ") { it.capitalized() }
 
 /**
  * Replacement for Kotlin's deprecated `capitalize()` function.

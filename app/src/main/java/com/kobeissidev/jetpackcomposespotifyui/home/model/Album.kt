@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.model
+package com.kobeissidev.jetpackcomposespotifyui.home.model
 
 import com.kobeissidev.jetpackcomposespotifyui.util.capitalizeWords
 
