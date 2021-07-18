@@ -38,9 +38,7 @@ import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyShuffleBlue
 
 @Composable
 fun RecentlyPlayedSection() {
-    Column(
-        modifier = Modifier.padding(8.dp)
-    ) {
+    Column(modifier = Modifier.padding(8.dp)) {
         Header(
             id = R.string.recently_played,
             modifier = Modifier.padding(
@@ -63,7 +61,11 @@ private fun RecentlyPlayedAlbums(context: Context = LocalContext.current) {
                     modifier = Modifier
                         .size(150.dp)
                         .padding(vertical = 8.dp)
-                        .clickable { Toast.makeText(context, it.albumName, Toast.LENGTH_SHORT).show() }
+                        .clickable {
+                            Toast
+                                .makeText(context, it.albumName, Toast.LENGTH_SHORT)
+                                .show()
+                        }
                 )
                 AlbumTitle(it.albumName)
             }

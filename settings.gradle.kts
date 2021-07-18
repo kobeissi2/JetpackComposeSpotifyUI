@@ -1,2 +1,2 @@
-rootProject.name = "JetpackComposeDemo"
+rootProject.name = "JetpackComposeSpotifyUI"
 include(":app")

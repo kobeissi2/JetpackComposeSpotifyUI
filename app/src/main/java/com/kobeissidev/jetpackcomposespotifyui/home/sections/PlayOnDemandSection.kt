@@ -33,7 +33,11 @@ fun PlayOnDemandSection(context: Context = LocalContext.current) {
             modifier = Modifier
                 .size(256.dp)
                 .align(Alignment.CenterHorizontally)
-                .clickable { Toast.makeText(context, R.string.play_on_demand, Toast.LENGTH_SHORT).show() }
+                .clickable {
+                    Toast
+                        .makeText(context, R.string.play_on_demand, Toast.LENGTH_SHORT)
+                        .show()
+                }
         )
     }
 }

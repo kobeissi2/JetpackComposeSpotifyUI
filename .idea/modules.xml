@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JetpackComposeDemo.iml" filepath="$PROJECT_DIR$/.idea/modules/JetpackComposeDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JetpackComposeDemo.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JetpackComposeDemo.app.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JetpackComposeDemo.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/JetpackComposeDemo.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JetpackComposeSpotifyUI.iml" filepath="$PROJECT_DIR$/.idea/modules/JetpackComposeSpotifyUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JetpackComposeSpotifyUI.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JetpackComposeSpotifyUI.app.iml" />
     </modules>
   </component>
 </project>
