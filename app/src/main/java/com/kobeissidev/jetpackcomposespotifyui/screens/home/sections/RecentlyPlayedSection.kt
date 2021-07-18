@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.home.sections
+package com.kobeissidev.jetpackcomposespotifyui.screens.home.sections
 
 import android.content.Context
 import android.widget.Toast
@@ -17,6 +17,7 @@ import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Shuffle
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -33,7 +34,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.rememberImagePainter
 import com.kobeissidev.jetpackcomposespotifyui.R
 import com.kobeissidev.jetpackcomposespotifyui.composable.Header
-import com.kobeissidev.jetpackcomposespotifyui.home.model.albums
+import com.kobeissidev.jetpackcomposespotifyui.screens.home.model.albums
 import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyShuffleBlue
 
 @Composable
@@ -52,6 +53,8 @@ fun RecentlyPlayedSection() {
 
 @Composable
 private fun RecentlyPlayedAlbums(context: Context = LocalContext.current) {
+    // Remember the albums so it doesn't shuffle again on every recomposition.
+    val albums = remember { albums }
     LazyRow {
         items(items = albums, itemContent = {
             Column {

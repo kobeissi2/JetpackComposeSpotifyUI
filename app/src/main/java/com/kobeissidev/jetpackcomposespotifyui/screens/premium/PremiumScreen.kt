@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.premium
+package com.kobeissidev.jetpackcomposespotifyui.screens.premium
 
 import androidx.compose.runtime.Composable
 

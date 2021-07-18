@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.home
+package com.kobeissidev.jetpackcomposespotifyui.screens.home
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -7,9 +7,9 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.kobeissidev.jetpackcomposespotifyui.home.sections.GradientSection
-import com.kobeissidev.jetpackcomposespotifyui.home.sections.PlayOnDemandSection
-import com.kobeissidev.jetpackcomposespotifyui.home.sections.RecentlyPlayedSection
+import com.kobeissidev.jetpackcomposespotifyui.screens.home.sections.GradientSection
+import com.kobeissidev.jetpackcomposespotifyui.screens.home.sections.PlayOnDemandSection
+import com.kobeissidev.jetpackcomposespotifyui.screens.home.sections.RecentlyPlayedSection
 
 @Composable
 fun HomeScreen() {
