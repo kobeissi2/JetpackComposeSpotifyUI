@@ -9,6 +9,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import androidx.navigation.NavOptions
 import androidx.navigation.compose.currentBackStackEntryAsState
 import coil.compose.rememberImagePainter
 import com.kobeissidev.jetpackcomposespotifyui.navigation.BottomNavigationScreens
@@ -20,7 +21,7 @@ fun BottomNavigationBar(
 ) {
     BottomNavigation {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
-        val currentRoute =  navBackStackEntry?.destination?.route
+        val currentRoute = navBackStackEntry?.destination?.route
 
         items.forEach { screen ->
             BottomNavigationItem(
@@ -47,10 +48,17 @@ fun BottomNavigationBar(
                 },
                 selected = currentRoute == screen.route,
                 onClick = {
-                    // This if check gives us a "singleTop" behavior where we do not create a
-                    // second instance of the composable if we are already on that destination
                     if (currentRoute != screen.route) {
-                        navController.navigate(screen.route)
+                        navController.navigate(
+                            route = screen.route,
+                            navOptions = NavOptions
+                                .Builder()
+                                .setPopUpTo(
+                                    BottomNavigationScreens.Home.route,
+                                    screen.route == BottomNavigationScreens.Home.route
+                                )
+                                .build()
+                        )
                     }
                 }
             )
