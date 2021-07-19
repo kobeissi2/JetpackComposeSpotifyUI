@@ -2,7 +2,7 @@ object Versions {
     object Plugins {
         const val buildGradle = "7.1.0-alpha03"
         const val kotlin = "1.5.10"
-        const val hiltVersion = "2.37"
+        const val hilt = "2.37"
     }
 
     object Implementations {
@@ -14,7 +14,8 @@ object Versions {
         const val kotlin = Plugins.kotlin
         const val accompanist = "0.14.0"
         const val coil = "1.3.0"
-        const val hiltVersion = Plugins.hiltVersion
+        const val hilt = Plugins.hilt
+        const val hiltNavigation = "1.0.0-alpha02"
     }
 
     object TestImplementations {
@@ -28,6 +29,6 @@ object Versions {
     }
 
     object Kapt {
-        const val hiltVersion = Plugins.hiltVersion
+        const val hilt = Plugins.hilt
     }
 }

@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.screens.search
+package com.kobeissidev.jetpackcomposespotifyui.screen.search
 
 import androidx.compose.runtime.Composable
 

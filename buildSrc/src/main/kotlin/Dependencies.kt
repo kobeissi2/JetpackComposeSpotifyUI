@@ -26,7 +26,9 @@ object Dependencies {
             // Used for image loading
             add("io.coil-kt:coil-compose:$coil")
             // Hilt
-            add("com.google.dagger:hilt-android:$hiltVersion")
+            add("com.google.dagger:hilt-android:$hilt")
+            // Used for hiltViewModel()
+            add("androidx.hilt:hilt-navigation-compose:$hiltNavigation")
         }
     }
 
@@ -55,13 +57,13 @@ object Dependencies {
         arrayListOf<String>().apply {
             add("com.android.tools.build:gradle:$buildGradle")
             add("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin")
-            add("com.google.dagger:hilt-android-gradle-plugin:$hiltVersion")
+            add("com.google.dagger:hilt-android-gradle-plugin:$hilt")
         }
     }
 
     val kaptProcessors = Versions.Kapt.run {
         arrayListOf<String>().apply {
-            add("com.google.dagger:hilt-android-compiler:$hiltVersion")
+            add("com.google.dagger:hilt-android-compiler:$hilt")
         }
     }
 }

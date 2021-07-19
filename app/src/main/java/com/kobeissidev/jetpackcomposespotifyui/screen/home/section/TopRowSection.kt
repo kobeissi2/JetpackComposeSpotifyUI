@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.screens.home.sections
+package com.kobeissidev.jetpackcomposespotifyui.screen.home.section
 
 import android.content.Context
 import android.widget.Toast

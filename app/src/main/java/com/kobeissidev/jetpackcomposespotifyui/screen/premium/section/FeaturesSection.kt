@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.screens.premium.sections
+package com.kobeissidev.jetpackcomposespotifyui.screen.premium.section
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable

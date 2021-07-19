@@ -7,10 +7,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.kobeissidev.jetpackcomposespotifyui.composable.BottomNavigationBar
-import com.kobeissidev.jetpackcomposespotifyui.screens.home.HomeScreen
-import com.kobeissidev.jetpackcomposespotifyui.screens.playlist.PlaylistScreen
-import com.kobeissidev.jetpackcomposespotifyui.screens.premium.PremiumScreen
-import com.kobeissidev.jetpackcomposespotifyui.screens.search.SearchScreen
+import com.kobeissidev.jetpackcomposespotifyui.screen.home.HomeScreen
+import com.kobeissidev.jetpackcomposespotifyui.screen.playlist.PlaylistScreen
+import com.kobeissidev.jetpackcomposespotifyui.screen.premium.PremiumScreen
+import com.kobeissidev.jetpackcomposespotifyui.screen.search.SearchScreen
 
 @Composable
 fun MainLayout() {
