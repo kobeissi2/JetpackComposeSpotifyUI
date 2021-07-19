@@ -15,4 +15,8 @@
     <string name="album">album</string>
     <string name="get_premium">Get Premium</string>
     <string name="take_control">Take control of your music with Premium.</string>
+    <string name="download_music">Download music</string>
+    <string name="listen_anywhere">Listen anywhere, even offline.</string>
+    <string name="terms_and_conditions">Terms and Conditions apply. Learn more</string>
+    <string name="heres_what_you_get">Here\'s what you get:</string>
 </resources>

@@ -13,6 +13,7 @@ val Shapes = Shapes(
 
 
 val PurpleTriangleShape = GenericShape { size, _ ->
+    lineTo(size.width, (size.height*.65).toFloat())
     lineTo(size.width, size.height)
     lineTo(0f, size.height)
 }

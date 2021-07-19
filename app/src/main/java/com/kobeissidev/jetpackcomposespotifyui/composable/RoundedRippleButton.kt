@@ -34,7 +34,8 @@ fun RoundedRippleButton(
             style = MaterialTheme.typography.button.copy(
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.ExtraBold,
-                letterSpacing = 0.sp
+                letterSpacing = 0.sp,
+                fontSize = 16.sp
             ),
             modifier = Modifier.padding(
                 vertical = 4.dp,

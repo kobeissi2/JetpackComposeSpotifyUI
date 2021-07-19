@@ -10,4 +10,7 @@ val SpotifyTriangleBlue = Color(75, 117, 177)
 val SpotifyTrianglePurple = Color(57, 7, 166)
 val SpotifyTrianglePink = Color(239, 81, 156)
 
-val SpotifyDarkGrey = Color(18, 19, 21)
+val SpotifyDarkGrey = Color(7, 8, 10)
+val SpotifyTextGrey = Color(100, 101, 104, 255)
+
+val SpotifyDownloadBlue = Color(127,213,228)
