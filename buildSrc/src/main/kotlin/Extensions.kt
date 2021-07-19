@@ -31,4 +31,4 @@ fun PluginDependenciesSpec.id(list: List<String>) = list.forEach { id(it) }
 /**
  * Extension to add all classpaths from a provided list
  */
-fun ScriptHandlerScope.classpath(list: List<String>) = list.forEach { dependencies { classpath(it) } }
+fun ScriptHandlerScope.classpath(list: List<String>) = dependencies { list.forEach { classpath(it) } }

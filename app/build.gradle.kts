@@ -37,5 +37,6 @@ dependencies {
         implementation(implementations)
         testImplementation(testImplementations)
         androidTestImplementation(androidTestImplementations)
+        kapt(kaptProcessors)
     }
 }

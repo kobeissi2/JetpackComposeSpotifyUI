@@ -6,7 +6,9 @@ import androidx.activity.compose.setContent
 import com.kobeissidev.jetpackcomposespotifyui.composable.SystemBar
 import com.kobeissidev.jetpackcomposespotifyui.navigation.MainLayout
 import com.kobeissidev.jetpackcomposespotifyui.ui.theme.JetpackComposeDemoTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
