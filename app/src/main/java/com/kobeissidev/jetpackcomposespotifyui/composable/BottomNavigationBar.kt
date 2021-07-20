@@ -26,7 +26,7 @@ fun BottomNavigationBar(
         items.forEach { screen ->
             BottomNavigationItem(
                 icon = {
-                    // If icon is available user it.
+                    // If icon is available, use it.
                     screen.icon?.let {
                         Icon(
                             imageVector = it,

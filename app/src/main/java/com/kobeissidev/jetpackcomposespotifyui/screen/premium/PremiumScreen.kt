@@ -10,11 +10,7 @@ import com.kobeissidev.jetpackcomposespotifyui.screen.premium.section.GetPremium
 
 @Composable
 fun PremiumScreen() {
-    Column(
-        Modifier.verticalScroll(
-            state = rememberScrollState()
-        )
-    ) {
+    Column(Modifier.verticalScroll(state = rememberScrollState())) {
         GetPremiumSection()
         FeaturesSection()
     }

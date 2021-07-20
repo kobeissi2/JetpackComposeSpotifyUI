@@ -19,14 +19,15 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun LinkText(
     text: String,
-    url: String = "https://www.spotify.com/us/premium/",
     startIndex: Int,
     endIndex: Int,
+    modifier: Modifier = Modifier,
+    url: String = "https://www.spotify.com/us/premium/",
     tag: String = "URL",
     linkColor: Color = Color.White,
     textColor: Color = linkColor,
     fontSize: TextUnit = 14.sp,
-    textAlign: TextAlign = TextAlign.Center
+    textAlign: TextAlign = TextAlign.Center,
 ) {
     if (url.isBlank()) {
         throw Exception("Url cannot be blank")
@@ -41,7 +42,6 @@ fun LinkText(
                 textDecoration = TextDecoration.None
             ), start = startIndex, end = endIndex
         )
-
         // Attach a string annotation that stores a URL to the text "link"
         addStringAnnotation(
             tag = tag,
@@ -50,13 +50,11 @@ fun LinkText(
             end = endIndex
         )
     }
-
     // UriHandler parse and opens URI inside AnnotatedString Item in Browse
     val uriHandler = LocalUriHandler.current
-
     // Clickable text returns position of text that is clicked in onClick callback
     ClickableText(
-        modifier = Modifier
+        modifier = modifier
             .padding(16.dp)
             .fillMaxWidth(),
         text = annotatedLinkString,

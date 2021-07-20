@@ -18,14 +18,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-
 @Composable
 fun RoundedRippleButton(
-    @StringRes textId:Int,
-    context: Context = LocalContext.current
+    @StringRes textId: Int,
+    context: Context = LocalContext.current,
+    onClick: () -> Unit = { Toast.makeText(context, textId, Toast.LENGTH_SHORT).show() }
 ) {
     RippleButton(
-        onClick = { Toast.makeText(context, textId, Toast.LENGTH_SHORT).show() },
+        onClick = onClick,
         shape = RoundedCornerShape(50),
         ripple = rememberRipple(color = Color.Black)
     ) {

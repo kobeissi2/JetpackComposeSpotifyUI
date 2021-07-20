@@ -11,9 +11,8 @@ val Shapes = Shapes(
     large = RoundedCornerShape(0.dp)
 )
 
-
 val PurpleTriangleShape = GenericShape { size, _ ->
-    lineTo(size.width, (size.height*.65).toFloat())
+    lineTo(size.width, (size.height * .65).toFloat())
     lineTo(size.width, size.height)
     lineTo(0f, size.height)
 }

@@ -19,7 +19,7 @@ import com.kobeissidev.jetpackcomposespotifyui.R
 import com.kobeissidev.jetpackcomposespotifyui.composable.RoundedRippleButton
 
 @Composable
-fun ChooseMusicSection() {
+fun ChooseMusicSection(context: Context = LocalContext.current) {
     Row {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -43,28 +43,22 @@ fun ChooseMusicSection() {
             Spacer(modifier = Modifier.padding(top = 24.dp))
             RoundedRippleButton(textId = R.string.choose_music)
             Spacer(modifier = Modifier.padding(top = 16.dp))
-            NotNowButton()
+            TextButton(
+                onClick = { Toast.makeText(context, R.string.not_now, Toast.LENGTH_SHORT).show() }
+            ) {
+                Text(
+                    text = stringResource(id = R.string.not_now).uppercase(),
+                    style = MaterialTheme.typography.button.copy(
+                        textAlign = TextAlign.Center,
+                        fontWeight = FontWeight.Bold,
+                        letterSpacing = 0.sp
+                    ),
+                    modifier = Modifier.padding(
+                        vertical = 1.dp,
+                        horizontal = 48.dp
+                    )
+                )
+            }
         }
-    }
-
-}
-
-@Composable
-private fun NotNowButton(context: Context = LocalContext.current) {
-    TextButton(
-        onClick = { Toast.makeText(context, R.string.not_now, Toast.LENGTH_SHORT).show() }
-    ) {
-        Text(
-            text = stringResource(id = R.string.not_now).uppercase(),
-            style = MaterialTheme.typography.button.copy(
-                textAlign = TextAlign.Center,
-                fontWeight = FontWeight.Bold,
-                letterSpacing = 0.sp
-            ),
-            modifier = Modifier.padding(
-                vertical = 1.dp,
-                horizontal = 48.dp
-            )
-        )
     }
 }

@@ -12,7 +12,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun Header(
+fun CenteredTitleHeader(
     @StringRes id: Int,
     modifier: Modifier = Modifier
 ) {

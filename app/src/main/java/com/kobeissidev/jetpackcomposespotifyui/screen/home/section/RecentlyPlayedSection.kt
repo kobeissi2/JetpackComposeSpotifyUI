@@ -34,14 +34,14 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberImagePainter
 import com.kobeissidev.jetpackcomposespotifyui.R
-import com.kobeissidev.jetpackcomposespotifyui.composable.Header
+import com.kobeissidev.jetpackcomposespotifyui.composable.CenteredTitleHeader
 import com.kobeissidev.jetpackcomposespotifyui.screen.home.HomeViewModel
 import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyShuffleBlue
 
 @Composable
 fun RecentlyPlayedSection() {
     Column(modifier = Modifier.padding(8.dp)) {
-        Header(
+        CenteredTitleHeader(
             id = R.string.recently_played,
             modifier = Modifier.padding(
                 top = 16.dp,
@@ -55,10 +55,11 @@ fun RecentlyPlayedSection() {
 @Composable
 private fun RecentlyPlayedAlbums(
     context: Context = LocalContext.current,
-    viewModel : HomeViewModel = hiltViewModel()
+    viewModel: HomeViewModel = hiltViewModel()
 ) {
     // Remember the albums so it doesn't shuffle again on every recomposition.
     val albums = remember { viewModel.albums }
+
     LazyRow {
         items(items = albums, itemContent = {
             Column {
@@ -88,7 +89,6 @@ private fun AlbumTitle(albumName: String) {
         appendInlineContent(myId, "[icon]")
         append(albumName)
     }
-
     val inlineContent = mapOf(
         Pair(
             // This tells the [CoreText] to replace the placeholder string "[icon]" by

@@ -1,18 +1,13 @@
 package com.kobeissidev.jetpackcomposespotifyui.screen.home.model
 
 import com.kobeissidev.jetpackcomposespotifyui.screen.home.HomeViewModel
-import com.kobeissidev.jetpackcomposespotifyui.util.capitalizeWords
+import com.kobeissidev.jetpackcomposespotifyui.util.wordsCapitalized
+import com.kobeissidev.jetpackcomposespotifyui.util.spaceReplaced
 
 data class Album(
     val artist: String,
-    val name: String
+    private val name: String
 ) {
-
-    /**
-     * Make the string more human readable.
-     */
-    private val String.spaceReplaced get() = replace(' ', '-')
-
     /**
      * Build the url as it follows the same pattern.
      */
@@ -21,5 +16,5 @@ data class Album(
     /**
      * Capitalize the album name.
      */
-    val albumName get() = name.capitalizeWords()
+    val albumName get() = name.wordsCapitalized
 }

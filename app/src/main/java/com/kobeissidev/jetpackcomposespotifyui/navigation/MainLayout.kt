@@ -2,7 +2,6 @@ package com.kobeissidev.jetpackcomposespotifyui.navigation
 
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -23,16 +22,11 @@ fun MainLayout() {
     )
 
     Scaffold(bottomBar = { BottomNavigationBar(navController, bottomNavigationItems) }) {
-        MainScreenNavigationConfigurations(navController)
-    }
-}
-
-@Composable
-private fun MainScreenNavigationConfigurations(navController: NavHostController) {
-    NavHost(navController, startDestination = BottomNavigationScreens.Home.route) {
-        composable(BottomNavigationScreens.Home.route) { HomeScreen() }
-        composable(BottomNavigationScreens.Search.route) { SearchScreen() }
-        composable(BottomNavigationScreens.Playlist.route) { PlaylistScreen() }
-        composable(BottomNavigationScreens.Premium.route) { PremiumScreen() }
+        NavHost(navController, startDestination = BottomNavigationScreens.Home.route) {
+            composable(BottomNavigationScreens.Home.route) { HomeScreen() }
+            composable(BottomNavigationScreens.Search.route) { SearchScreen() }
+            composable(BottomNavigationScreens.Playlist.route) { PlaylistScreen() }
+            composable(BottomNavigationScreens.Premium.route) { PremiumScreen() }
+        }
     }
 }

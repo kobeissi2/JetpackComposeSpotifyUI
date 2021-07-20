@@ -12,7 +12,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import coil.compose.rememberImagePainter
 import com.kobeissidev.jetpackcomposespotifyui.R
-import com.kobeissidev.jetpackcomposespotifyui.composable.Header
+import com.kobeissidev.jetpackcomposespotifyui.composable.CenteredTitleHeader
 
 @Composable
 fun PlayOnDemandSection(context: Context = LocalContext.current) {
@@ -21,7 +21,7 @@ fun PlayOnDemandSection(context: Context = LocalContext.current) {
             .fillMaxWidth()
             .padding(all = 36.dp)
     ) {
-        Header(id = R.string.play_on_demand)
+        CenteredTitleHeader(id = R.string.play_on_demand)
         Spacer(
             modifier = Modifier
                 .fillMaxWidth()
