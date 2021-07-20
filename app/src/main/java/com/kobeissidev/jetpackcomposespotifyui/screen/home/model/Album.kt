@@ -1,6 +1,6 @@
 package com.kobeissidev.jetpackcomposespotifyui.screen.home.model
 
-import com.kobeissidev.jetpackcomposespotifyui.screen.HomeViewModel
+import com.kobeissidev.jetpackcomposespotifyui.screen.home.HomeViewModel
 import com.kobeissidev.jetpackcomposespotifyui.util.capitalizeWords
 
 data class Album(

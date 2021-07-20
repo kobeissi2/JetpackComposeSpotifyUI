@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.screen
+package com.kobeissidev.jetpackcomposespotifyui.screen.home
 
 import androidx.lifecycle.ViewModel
 import com.kobeissidev.jetpackcomposespotifyui.screen.home.model.Album

@@ -35,7 +35,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil.compose.rememberImagePainter
 import com.kobeissidev.jetpackcomposespotifyui.R
 import com.kobeissidev.jetpackcomposespotifyui.composable.Header
-import com.kobeissidev.jetpackcomposespotifyui.screen.HomeViewModel
+import com.kobeissidev.jetpackcomposespotifyui.screen.home.HomeViewModel
 import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyShuffleBlue
 
 @Composable
