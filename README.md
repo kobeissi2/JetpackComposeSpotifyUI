@@ -6,6 +6,7 @@ Some things are not 1:1 such as some images and icons and were manually created 
 
 
 Original:
+
 ![Original](https://community.spotify.com/t5/image/serverpage/image-id/89943i688CC4455F2B26D4/image-size/large?v=v2&px=999)
 
 Imitation:
