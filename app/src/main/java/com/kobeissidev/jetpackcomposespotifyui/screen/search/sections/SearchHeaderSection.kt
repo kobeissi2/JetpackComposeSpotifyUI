@@ -31,7 +31,7 @@ fun SearchHeaderSection() {
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .fillMaxHeight(0.25f)
+            .fillMaxHeight(0.28f)
             .padding(all = 1.dp)
     ) {
         Column(
@@ -45,7 +45,7 @@ fun SearchHeaderSection() {
                     fontWeight = FontWeight.Bold,
                     fontSize = 40.sp
                 ),
-                modifier = Modifier.padding(top = 36.dp)
+                modifier = Modifier.padding(top = 60.dp)
             )
             SearchBar(
                 hint = stringResource(id = R.string.search_placeholder),
