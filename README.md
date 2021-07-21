@@ -12,5 +12,6 @@ Original:
 Imitation:
 <p>
   <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Home.PNG" width="240" title="Home"/>
+  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Search.PNG" width="240" title="Search"/>
   <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Premium.PNG" width="240" alt="Premium"/>
 </p>
