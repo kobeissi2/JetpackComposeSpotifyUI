@@ -10,8 +10,10 @@ Original:
 ![Original](https://community.spotify.com/t5/image/serverpage/image-id/89943i688CC4455F2B26D4/image-size/large?v=v2&px=999)
 
 Imitation:
+
 <p>
-  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Home.PNG" width="240" title="Home"/>
-  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Search.PNG" width="240" title="Search"/>
-  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Premium.PNG" width="240" title="Premium"/>
+  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Home.png" width="235" title="Home"/>
+  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Search.png" width="235" title="Search"/>
+  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Playlists.png" width="235" title="Your Playlists"/>
+  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Premium.png" width="235" title="Premium"/>
 </p>
