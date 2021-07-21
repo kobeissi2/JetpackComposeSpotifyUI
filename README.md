@@ -12,8 +12,8 @@ Original:
 Imitation:
 
 <p>
-  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Home.png" width="235" title="Home"/>
-  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Search.png" width="235" title="Search"/>
-  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Playlists.png" width="235" title="Your Playlists"/>
-  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Premium.png" width="235" title="Premium"/>
+  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Home.png" width="200" title="Home"/>
+  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Search.png" width="200" title="Search"/>
+  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Playlists.png" width="200" title="Your Playlists"/>
+  <img src="https://github.com/kobeissi2/JetpackComposeSpotifyUI/blob/main/screenshots/Premium.png" width="200" title="Premium"/>
 </p>
