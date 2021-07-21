@@ -17,6 +17,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.text.Placeholder
 import androidx.compose.ui.text.PlaceholderVerticalAlign
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -29,7 +30,10 @@ import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyShuffleBlue
 fun InlineShuffleText(
     textString: String,
     modifier: Modifier = Modifier,
-    textAlign: TextAlign = TextAlign.Center,
+    style: TextStyle = MaterialTheme.typography.body2.copy(
+        fontSize = 13.sp,
+        textAlign = TextAlign.Center
+    ),
     maxLines: Int = 2
 ) {
     val myId = "inlineContent"
@@ -80,9 +84,6 @@ fun InlineShuffleText(
         maxLines = maxLines,
         overflow = TextOverflow.Ellipsis,
         inlineContent = inlineContent,
-        style = MaterialTheme.typography.body2.copy(
-            fontSize = 13.sp,
-            textAlign = textAlign
-        )
+        style = style
     )
 }
