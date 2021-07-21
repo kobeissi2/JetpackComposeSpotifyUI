@@ -21,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.kobeissidev.jetpackcomposespotifyui.R
 import com.kobeissidev.jetpackcomposespotifyui.composable.CenteredTitleHeader
 
@@ -30,7 +31,7 @@ fun SearchHeaderSection() {
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .height(200.dp)
+            .fillMaxHeight(0.25f)
             .padding(all = 1.dp)
     ) {
         Column(
@@ -40,16 +41,17 @@ fun SearchHeaderSection() {
         ) {
             CenteredTitleHeader(
                 id = R.string.search,
-                style = MaterialTheme.typography.h4.copy(fontWeight = FontWeight.Bold),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(top = 32.dp)
+                style = MaterialTheme.typography.h4.copy(
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 40.sp
+                ),
+                modifier = Modifier.padding(top = 36.dp)
             )
             SearchBar(
                 hint = stringResource(id = R.string.search_placeholder),
                 modifier = Modifier
                     .fillMaxWidth(0.96f)
-                    .padding(top = 32.dp)
+                    .padding(top = 28.dp)
             )
         }
     }
