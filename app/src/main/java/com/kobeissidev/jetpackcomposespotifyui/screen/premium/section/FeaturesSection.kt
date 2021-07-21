@@ -68,8 +68,8 @@ fun FeaturesSection() {
 private fun DownloadImage() {
     Box(
         modifier = Modifier
-            .height(200.dp)
-            .width(200.dp)
+            .height(175.dp)
+            .width(175.dp)
             .padding(16.dp)
             .background(
                 color = SpotifyDownloadBlue,
@@ -82,10 +82,10 @@ private fun DownloadImage() {
             contentDescription = null,
             tint = SpotifyTriangleBlue,
             modifier = Modifier
-                .height(32.dp)
-                .width(32.dp)
+                .height(24.dp)
+                .width(24.dp)
                 .absoluteOffset(
-                    x = 32.dp,
+                    x = 28.dp,
                     y = 36.dp
                 )
                 .background(
