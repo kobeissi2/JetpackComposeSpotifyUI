@@ -14,7 +14,7 @@ val SpotifyGrey = Color(58, 58, 58)
 val SpotifyMidGrey = Color(36, 36, 36)
 val SpotifyDarkGrey = Color(18,18,18)
 val SpotifyDarkerGrey = Color(20,16,13)
-val SpotifyDarkestGrey = Color(34,35,39)
 val SpotifyTextGrey = Color(100, 101, 104, 255)
 
 val SpotifyDownloadBlue = Color(127, 213, 228)
+val SpotifyGreen = Color(27,186,86)

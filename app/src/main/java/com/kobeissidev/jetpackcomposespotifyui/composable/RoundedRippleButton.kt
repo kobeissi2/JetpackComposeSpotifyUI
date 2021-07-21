@@ -29,13 +29,18 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun RoundedRippleButton(
     @StringRes textId: Int,
+    modifier: Modifier = Modifier,
     context: Context = LocalContext.current,
+    color: Color = Color.Black,
+    backgroundColor: Color = Color.White,
     onClick: () -> Unit = { Toast.makeText(context, textId, Toast.LENGTH_SHORT).show() }
 ) {
     RippleButton(
         onClick = onClick,
         shape = RoundedCornerShape(50),
-        ripple = rememberRipple(color = Color.Black)
+        ripple = rememberRipple(color = color),
+        modifier = modifier,
+        colors = ButtonDefaults.buttonColors(backgroundColor = backgroundColor)
     ) {
         Text(
             text = stringResource(id = textId).uppercase(),
@@ -43,7 +48,8 @@ fun RoundedRippleButton(
                 textAlign = TextAlign.Center,
                 fontWeight = FontWeight.ExtraBold,
                 letterSpacing = 0.sp,
-                fontSize = 16.sp
+                fontSize = 16.sp,
+                color = color
             ),
             modifier = Modifier.padding(
                 vertical = 4.dp,
@@ -65,7 +71,7 @@ fun RippleButton(
     border: BorderStroke? = null,
     colors: ButtonColors = ButtonDefaults.buttonColors(),
     contentPadding: PaddingValues = ButtonDefaults.ContentPadding,
-    ripple : Indication = rememberRipple(),
+    ripple: Indication = rememberRipple(),
     content: @Composable RowScope.() -> Unit
 ) {
     val contentColor by colors.contentColor(enabled)

@@ -17,8 +17,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import coil.compose.rememberImagePainter
 import com.kobeissidev.jetpackcomposespotifyui.R
+import com.kobeissidev.jetpackcomposespotifyui.composable.MusicNoteIcon
 import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyDownloadBlue
 import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyTriangleBlue
 
@@ -76,15 +76,7 @@ private fun DownloadImage() {
                 shape = RoundedCornerShape(50)
             )
     ) {
-        Icon(
-            painter = rememberImagePainter(data = R.drawable.ic_music_note),
-            contentDescription = null,
-            tint = Color.White,
-            modifier = Modifier
-                .height(75.dp)
-                .width(75.dp)
-                .align(Alignment.Center)
-        )
+        MusicNoteIcon(modifier = Modifier.align(Alignment.Center))
         Icon(
             imageVector = Icons.Filled.ArrowDownward,
             contentDescription = null,
