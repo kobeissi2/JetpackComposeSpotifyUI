@@ -3,6 +3,7 @@ package com.kobeissidev.jetpackcomposespotifyui
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
@@ -12,6 +13,7 @@ import com.kobeissidev.jetpackcomposespotifyui.ui.theme.JetpackComposeDemoTheme
 import com.kobeissidev.jetpackcomposespotifyui.ui.theme.SpotifyDarkGrey
 import dagger.hilt.android.AndroidEntryPoint
 
+@ExperimentalFoundationApi
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

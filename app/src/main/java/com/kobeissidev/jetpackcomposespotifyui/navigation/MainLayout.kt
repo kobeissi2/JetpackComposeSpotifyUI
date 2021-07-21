@@ -1,5 +1,6 @@
 package com.kobeissidev.jetpackcomposespotifyui.navigation
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
@@ -10,6 +11,7 @@ import com.kobeissidev.jetpackcomposespotifyui.screen.playlist.PlaylistScreen
 import com.kobeissidev.jetpackcomposespotifyui.screen.premium.PremiumScreen
 import com.kobeissidev.jetpackcomposespotifyui.screen.search.SearchScreen
 
+@ExperimentalFoundationApi
 @Composable
 fun MainLayout() {
     val navController = rememberNavController()
