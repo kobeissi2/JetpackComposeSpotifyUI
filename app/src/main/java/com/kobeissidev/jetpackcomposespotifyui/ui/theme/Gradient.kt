@@ -11,7 +11,10 @@ import kotlin.math.*
  * Credit to Ehsan msz on StackOverflow
  * https://stackoverflow.com/questions/68218714/angled-gradient-background-in-jetpack-compose
  */
-fun Modifier.gradientBackground(colors: List<Color>, angle: Float) = then(
+fun Modifier.gradientBackground(
+    colors: List<Color>,
+    angle: Float
+) = then(
     Modifier.drawBehind {
         val angleRad = angle / 180f * PI
         val x = cos(angleRad).toFloat() //Fractional x

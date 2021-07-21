@@ -1,4 +1,4 @@
-package com.kobeissidev.jetpackcomposespotifyui.composable
+package com.kobeissidev.jetpackcomposespotifyui.navigation
 
 import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
@@ -12,7 +12,6 @@ import androidx.navigation.NavHostController
 import androidx.navigation.NavOptions
 import androidx.navigation.compose.currentBackStackEntryAsState
 import coil.compose.rememberImagePainter
-import com.kobeissidev.jetpackcomposespotifyui.navigation.BottomNavigationScreens
 
 @Composable
 fun BottomNavigationBar(

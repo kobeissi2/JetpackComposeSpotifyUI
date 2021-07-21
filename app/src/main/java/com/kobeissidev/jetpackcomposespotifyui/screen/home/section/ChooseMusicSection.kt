@@ -16,6 +16,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kobeissidev.jetpackcomposespotifyui.R
+import com.kobeissidev.jetpackcomposespotifyui.composable.CenteredTitleHeader
 import com.kobeissidev.jetpackcomposespotifyui.composable.RoundedRippleButton
 
 @Composable
@@ -30,8 +31,8 @@ fun ChooseMusicSection(context: Context = LocalContext.current) {
                     vertical = 12.dp
                 )
         ) {
-            Text(
-                text = stringResource(id = R.string.hey),
+            CenteredTitleHeader(
+                id = R.string.hey,
                 style = MaterialTheme.typography.h4.copy(fontWeight = FontWeight.Bold)
             )
             Spacer(modifier = Modifier.padding(top = 8.dp))
