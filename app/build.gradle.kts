@@ -43,7 +43,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling:1.0.1")
     implementation("androidx.compose.runtime:runtime:1.0.1")
     // implementations support for setContent in activities
-    implementation("androidx.activity:activity-compose:1.3.0-rc01")
+    implementation("androidx.activity:activity-compose:1.3.1")
     // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
     implementation("androidx.compose.foundation:foundation:1.0.1")
     // Material Design
@@ -52,13 +52,13 @@ dependencies {
     implementation("androidx.compose.material:material-icons-core:1.0.1")
     implementation("androidx.compose.material:material-icons-extended:1.0.1")
     // Accompanist to supplement Jetpack Compose
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.14.0")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.16.1")
     // Navigation Architecture
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha04")
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha06")
     // Used for image loading
-    implementation("io.coil-kt:coil-compose:1.3.0")
+    implementation("io.coil-kt:coil-compose:1.3.2")
     // Hilt
-    implementation("com.google.dagger:hilt-android:2.37")
+    implementation("com.google.dagger:hilt-android:2.38.1")
     // Used for hiltViewModel()
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0-alpha03")
 
@@ -68,5 +68,5 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.1")
 
-    kapt("com.google.dagger:hilt-android-compiler:2.37")
+    kapt("com.google.dagger:hilt-android-compiler:2.38.1")
 }
