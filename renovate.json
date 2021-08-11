@@ -1,5 +1,11 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":switchToGradleLite",
+    ":automergePr",
+    ":automergeAll",
+    ":disableRateLimiting",
+    ":label(<renovate>)",
+    "group:all"
   ]
 }
