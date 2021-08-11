@@ -29,7 +29,6 @@ android.run {
         targetCompatibility(JavaVersion.VERSION_1_8)
     }
 
-    composeOptions.kotlinCompilerExtensionVersion = "1.0.1"
     kotlinOptions.jvmTarget = "1.8"
     buildFeatures.compose = true
 }
