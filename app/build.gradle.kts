@@ -37,7 +37,7 @@ android.run {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.21")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.30")
     implementation("androidx.core:core-ktx:1.7.0-alpha01")
     implementation("androidx.appcompat:appcompat:1.4.0-alpha03")
     implementation("androidx.compose.ui:ui:$composeVersion")
