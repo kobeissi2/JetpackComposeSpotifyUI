@@ -1,4 +1,4 @@
-val composeVersion = "1.1.0-alpha02"
+val composeVersion = "1.1.0-alpha03"
 
 plugins {
     id("com.android.application")
@@ -38,7 +38,7 @@ android.run {
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.30")
-    implementation("androidx.core:core-ktx:1.7.0-alpha01")
+    implementation("androidx.core:core-ktx:1.7.0-alpha02")
     implementation("androidx.appcompat:appcompat:1.4.0-alpha03")
     implementation("androidx.compose.ui:ui:$composeVersion")
     // Tooling support (Previews, etc.)
@@ -56,7 +56,7 @@ dependencies {
     // Accompanist to supplement Jetpack Compose
     implementation("com.google.accompanist:accompanist-systemuicontroller:0.17.0")
     // Navigation Architecture
-    implementation("androidx.navigation:navigation-compose:2.4.0-alpha07")
+    implementation("androidx.navigation:navigation-compose:2.4.0-alpha08")
     // Used for image loading
     implementation("io.coil-kt:coil-compose:1.3.2")
     // Hilt
