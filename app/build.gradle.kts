@@ -54,7 +54,7 @@ dependencies {
     implementation("androidx.compose.material:material-icons-core:$composeVersion")
     implementation("androidx.compose.material:material-icons-extended:$composeVersion")
     // Accompanist to supplement Jetpack Compose
-    implementation("com.google.accompanist:accompanist-systemuicontroller:0.17.0")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.18.0")
     // Navigation Architecture
     implementation("androidx.navigation:navigation-compose:2.4.0-alpha08")
     // Used for image loading
